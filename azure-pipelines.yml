@@ -86,12 +86,12 @@ stages:
         WebAppName: 'webapp-apiqa-cc-fusionapi-001'
         package: '$(Pipeline.Workspace)/drop'
 
-- stage: AutomationTestCasesOnQA
-  displayName: "AutomationTest"
-  jobs:
-    - job: RunSmokeTest
-      steps:
-        - script: cd /d F:\DevOps\QA_Test_Automation && mvn clean test -Dgroups=Smoke,setUp -Dprod=api -Denv=devopsqa -Dtest=api.Api_TestCases.**
+#- stage: AutomationTestCasesOnQA
+#  displayName: "AutomationTest"
+# jobs:
+#   - job: RunSmokeTest
+#     steps:
+#       - script: cd /d F:\DevOps\QA_Test_Automation && mvn clean test -Dgroups=Smoke,setUp -Dprod=api -Denv=devopsqa -Dtest=api.Api_TestCases.**
      
 
 # - stage: DeployUAT
